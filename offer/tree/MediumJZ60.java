@@ -1,4 +1,4 @@
-package com.hou.offer;
+package com.hou.offer.tree;
 
 import com.hou.util.TreeNode;
 
