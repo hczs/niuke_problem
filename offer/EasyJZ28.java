@@ -14,6 +14,8 @@ public class EasyJZ28 {
      * 由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。如果不存在则输出0。
      * 可以使用HashMap存储，然后value是每个数字出现的次数
      * 遍历key，找出value > (数组.length / 2) return key
+     *
+     *  还可以优化：在同一个循环中加上长度的判断
      */
     public int MoreThanHalfNum_Solution(int [] array) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -23,10 +25,8 @@ public class EasyJZ28 {
             } else {
                 map.put(i, 1);
             }
-        }
-        for (Integer key : map.keySet()) {
-            if (map.get(key) > (array.length / 2) ) {
-                return key;
+            if (map.get(i) > (array.length / 2) ) {
+                return i;
             }
         }
         return 0;
