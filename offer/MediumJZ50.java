@@ -17,8 +17,9 @@ public class MediumJZ50 {
      * 如果数组中有重复的数字，函数返回true，否则返回false。
      * 如果数组中有重复的数字，把重复的数字放到参数duplication[0]中。（ps:duplication已经初始化，可以直接赋值使用。）
      * 一个一个往hashMap里面放，如果放之前判断包含，包含了就返回true，设置duplication值，遍历完毕 证明没有包含的，就返回false
+     * 牛客的方法定义好像out了..
      */
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
+    public boolean duplicate(int[] numbers,int length,int [] duplication) {
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         for (int i=0; i<length; i++) {
             if (hashMap.containsKey(numbers[i])) {
