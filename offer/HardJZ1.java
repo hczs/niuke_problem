@@ -1,3 +1,8 @@
+package com.hou.offer;
+
+/**
+ * @author hczs8
+ */
 public class HardJZ1{
     /**
      * 二维数组中的查找
