@@ -22,7 +22,8 @@ public class HardJZ3{
     }
 
     /**
-     * 再用栈写一下吧
+     * 递归存在问题，因为当链表非常长的时候，会存在函数调用栈溢出的问题
+     * 所以建议用栈
      * 循环两遍，第一次放入栈，第二次出栈返回
      */
     public ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
