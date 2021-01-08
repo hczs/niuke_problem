@@ -62,6 +62,7 @@ public class MediumJZ42 {
      * 如果相加小于sum，证明从头往后那个太小了，得增加，所以i++
      * 如果相加大于sum，证明从后往前那个太大了，得减小，所以j--
      * 时间复杂度O(n)
+     * 真不错
      */
     public ArrayList<Integer> FindNumbersWithSum1(int [] array,int sum) {
         ArrayList<Integer> result = new ArrayList<>();
