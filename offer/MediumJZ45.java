@@ -51,7 +51,6 @@ public class MediumJZ45 {
                 return false;
             }
         }
-        System.out.println(set);
         // 遍历set
         int pre = 0;
         for (int element : set) {
@@ -72,9 +71,4 @@ public class MediumJZ45 {
         return kingNum >= 0;
     }
 
-    public static void main(String[] args) {
-        int[] numbers = new int[]{1,3,2,5,4};
-        MediumJZ45 mediumJZ45 = new MediumJZ45();
-        mediumJZ45.isContinuous(numbers);
-    }
 }
