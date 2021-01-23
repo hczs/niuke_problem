@@ -1,6 +1,5 @@
 package com.hou.offer;
 
-import java.util.LinkedList;
 
 /**
  * @author ：hc
