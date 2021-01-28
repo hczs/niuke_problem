@@ -3,6 +3,9 @@ package com.hou.offer.sort;
 import java.util.Arrays;
 
 /**
+ * 冒泡排序基本实现和优化
+ * 稳定的排序算法
+ * 时间复杂度O(n²)
  * @author ：hc
  * @date ：Created in 2021/1/9 16:42
  * @modified By：
@@ -21,9 +24,8 @@ public class BubbleSort {
      * 重复n次，n为数组长度
      * 不论好坏都是O(n²)
      * @param array 待排序数组
-     * @return 排序之后的数组
      */
-    public int[] bubbleSort(int[] array) {
+    public void bubbleSort(int[] array) {
         for (int i=0; i<array.length; i++) {
             // 注意第二层循环条件，从倒数第一个开始，到第二（i+1）个元素停
             // 意思就是之前浮出水面的最小值就不要打扰了，继续求除了之前的最小值，后面的值中的最小值，浮出来
@@ -36,7 +38,6 @@ public class BubbleSort {
                 }
             }
         }
-        return array;
     }
 
     /**
@@ -45,9 +46,8 @@ public class BubbleSort {
      * 如果没有发生元素交换，那大可不必进行后面的循环了，可以直接返回
      * 时间复杂度分析：最好情况，没有元素交换，O(n)，最坏情况，数组倒序，O(n²)
      * @param array 待排序数组
-     * @return 排序之后的数组
      */
-    public int[] betterBubbleSort(int[] array) {
+    public void betterBubbleSort(int[] array) {
         // 记录是否进行过交换
         boolean flag = true;
         // 这里循环结束条件改一下，只有flag=true的情况下才会继续循环，因为发生了元素交换
@@ -63,13 +63,14 @@ public class BubbleSort {
                 }
             }
         }
-        return array;
     }
 
     public static void main(String[] args) {
         // 编写主函数进行测试
         int[] array = new int[]{2,3,6,5,1,7,9,8,4};
+        int[] array1 = new int[]{1,3,2,4,5,6,7};
         BubbleSort sort = new BubbleSort();
-        System.out.println(Arrays.toString(sort.betterBubbleSort(array)));
+        sort.betterBubbleSort(array1);
+        System.out.println(Arrays.toString(array1));
     }
 }
